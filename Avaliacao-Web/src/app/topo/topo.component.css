@@ -1,0 +1,15 @@
+.container-topo{
+	padding: 10px 20px;
+    border: solid 1px #535ead;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 90%;
+    border-radius: 4px;
+    background-color: #535ead;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+}

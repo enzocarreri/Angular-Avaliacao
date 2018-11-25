@@ -1,0 +1,8 @@
+.progress-bar{
+	margin: 10px 0px;
+	border: solid #e3e3e3 1px;
+}
+.progress-game{
+	height:20px;	
+	background-color: #f79046;
+}

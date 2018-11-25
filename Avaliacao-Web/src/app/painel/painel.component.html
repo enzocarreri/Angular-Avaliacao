@@ -1,0 +1,48 @@
+<div class="container container-meio">
+		<div class="row row-head">
+			<div class="col s12 no-padding">				
+				<app-progresso   [tempo]='tempoRestante'></app-progresso>
+				<app-tentativas  [vida1]='vidaJogo1' [vida2]='vidaJogo2' [vida3]='vidaJogo3'></app-tentativas>
+			</div>
+		</div>
+		<div class="container-conteudo">
+			<div class="row">
+				<div class="col s12">
+					<span> <b>Traduza a frase:</b>
+					</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<span>{{questao}}
+					</span>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s12">
+					<textarea #resposta id="textarea1" 
+					 class="{{respostaUsuario ? 'materialize-textarea' : 'materialize-textarea textoErrado'}}"
+					>{{textoVerificar}}</textarea>
+					<label for="textarea1">Digite a frase traduzida</label>
+				</div>				
+			</div>
+			
+			<span ng-bind="teste"></span>
+			<div class="row">
+				<div class="col s1">
+					<span>{{numQuestao}} of 4</span>
+				</div>
+				<div class="col s11">
+					<button   (click)="verificarResposta(resposta.value)" class="btn waves-effect waves-light btn-verificar-Texto" type="submit" name="action">Verificar						
+					</button>
+				</div>
+			</div>
+
+		</div>
+		<div id="modal1" class="modal modalJogo" [ngStyle]="{display:fimJogo}">
+			<div class="modal-content">
+				<h4>{{fimTitulo}}</h4>
+				<p>{{fimMensagem}}</p>
+			</div>			
+		</div>
